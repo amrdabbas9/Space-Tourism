@@ -1,0 +1,341 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 700;
+  src: url('./fonts/barlow_semi_condensed/BarlowSemiCondensed-Bold.ttf');
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 300;
+  src: url('./fonts/barlow_semi_condensed/BarlowSemiCondensed-Light.ttf');
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 600;
+  src: url('./fonts/barlow_semi_condensed/BarlowSemiCondensed-SemiBold.ttf');
+}
+:root{
+  --Main-Blue-Color: #0B0D17;
+  --Secondary-Blue-Color: #D0D6F9;
+
+}
+
+.page{
+  font-family: "Barlow Semi Condensed";
+  color: white;
+  background-color: var(--Main-Blue-Color);
+}
+
+
+
+.tran{
+  transition: .3s;
+}
+
+/* COLORS */
+
+.main-color{
+  color: var(--Main-Blue-Color)
+}
+
+.sec-color{
+  color: var(--Secondary-Blue-Color)
+}
+
+.main-back{
+  background-color: var(--Main-Blue-Color)
+}
+
+.sec-back{
+  background-color: var(--Secondary-Blue-Color)
+}
+
+/* FONTS */
+
+@layer components{
+
+  /* Desktop */
+
+  .text-preset-1{
+      font-size: 144px;
+    line-height: 171.9%;
+    letter-spacing: 0px;
+  }
+  .text-preset-2{
+    font-size: 100px;
+    line-height: 114.6%;
+    letter-spacing: 0px;
+  }
+  .text-preset-3{
+    font-size: 56px;
+    line-height: 64.2%;
+    letter-spacing: 0px;
+  }
+  .text-preset-4{
+    font-size: 32px;
+    line-height: 36.7%;
+    letter-spacing: 0px;
+  }
+  .text-preset-5{
+    font-size: 28px;
+    /* line-height: 33.6%; */
+    letter-spacing: 4px;
+  }
+  .text-preset-6{
+    font-size: 28px;
+    line-height: 32.1%;
+    letter-spacing: 0px;
+  }
+  .text-preset-7{
+    font-size: 14px;
+    line-height: 16.8%;
+    letter-spacing: 2px;
+  }
+  .text-preset-8{
+    font-size: 16px;
+    line-height: 19.2%;
+    letter-spacing: 2px;
+  }
+  .text-preset-9{
+    font-size: 18px;
+    line-height: 180%;
+    letter-spacing: 0px;
+  }
+
+  /* Tablet */
+
+  .tablet-text-preset-2{
+    font-size: 80px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .tablet-text-preset-3{
+    font-size: 40px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .tablet-text-preset-4{
+    font-size: 24px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .tablet-text-preset-5{
+    font-size: 15px;
+    line-height: auto;
+    letter-spacing: 15%;
+  }
+  .tablet-text-preset-9{
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: 180%;
+  }
+
+  /* Mobile */
+  .mobile-text-preset-1{
+    font-size: 80px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .mobile-text-preset-2{
+    font-size: 56px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .mobile-text-preset-3{
+    font-size: 24px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .mobile-text-preset-4{
+    font-size: 18px;
+    line-height: auto;
+    letter-spacing: 0px;
+  }
+  .mobile-text-preset-6{
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: 15%;
+  }
+  .mobile-text-preset-8{
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: 15%;
+  }
+  .mobile-text-preset-9{
+    font-size: 15px;
+    line-height: auto;
+    letter-spacing: 180%;
+  }
+
+}
+
+
+
+
+/* Nav Bar */
+.nav ul{
+  background-color: rgb(255, 255, 255, 5%);
+}
+.nav .ul li{
+  /* transition: 1s; */
+  border-bottom: 3px solid rgb(255, 255, 255, 0%);
+}
+.nav .ul .active li{
+  transition: .7s;
+  border-bottom: 3px solid rgb(255, 255, 255, 100%);
+}
+
+.nav .ul li:hover{
+  transition: .7s;
+  border-bottom: 3px solid rgb(255, 255, 255, 40%);
+}
+.nav .mob-ul{
+  transition: .5s;
+  backdrop-filter: blur(25px);
+}
+
+.nav .mob-ul li{
+  /* transition: 1s; */
+  border-right: 3px solid rgb(255, 255, 255, 0%);
+  box-sizing: border-box;
+}
+.nav .mob-ul .active li{
+  transition: .7s;
+  border-right: 3px solid rgb(255, 255, 255, 100%);
+}
+
+.nav .mob-ul li:hover{
+  transition: .7s;
+  border-right: 3px solid rgb(255, 255, 255, 40%);
+}
+
+@media (max-width:768px) {
+  .nav ul li{
+    font-size: 14px;
+    line-height: 16.8%;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* HOME */
+
+.home{
+  background-image: url('./assets/home/background-home-desktop.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
+
+.explore span{
+  opacity: 0%;
+  transition: .3s;
+}
+
+.explore:hover span{
+  opacity: 10%;
+}
+
+@media (max-width:768px) {
+  .home{
+    background-image: url('./assets/home/background-home-tablet.jpg');
+  }
+}
+@media (max-width:375px) {
+  .home{
+    background-image: url('./assets/home/background-home-mobile.jpg');
+  }
+}
+
+/* DESTINATION */
+
+.destination{
+  background-image: url('./assets/destination/background-destination-desktop.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
+
+
+
+.destination .dests li{
+  padding-bottom: 15px;
+  transition: .7s;
+  border-bottom: 3px solid rgb(255, 255, 255, 0%);
+}
+
+.destination .dests li:hover{
+  transition: .7s;
+  border-bottom: 3px solid rgb(255, 255, 255, 40%);
+}
+
+.destination .dests .active-dest{
+  transition: .7s;
+  border-bottom: 3px solid rgb(255, 255, 255, 40%);
+}
+
+@media (max-width:768px) {
+  .destination{
+    background-image: url('./assets/destination/background-destination-tablet.jpg');
+  }
+}
+@media (max-width:375px) {
+  .destination{
+    background-image: url('./assets/destination/background-destination-mobile.jpg');
+  }
+}
+
+
+
+/* CREW */
+
+.crew{
+  background-image: url('./assets/crew/background-crew-desktop.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
+
+
+@media (max-width:768px) {
+  .crew{
+    background-image: url('./assets/crew/background-crew-tablet.jpg');
+  }
+}
+@media (max-width:375px) {
+  .crew{
+    background-image: url('./assets/crew/background-crew-mobile.jpg');
+  }
+}
+
+
+
+
+/* TECHNOLOGY */
+.technology{
+  background-image: url('./assets/technology/background-technology-desktop.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
+
+
+@media (max-width:768px) {
+  .technology{
+    background-image: url('./assets/technology/background-technology-tablet.jpg');
+  }
+}
+@media (max-width:375px) {
+  .technology{
+    background-image: url('./assets/technology/background-technology-mobile.jpg');
+  }
+}
+.tech-step{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 150%;
+}
+.tech-img{    
+  flex-shrink: 0;
+  flex-basis: 35%;
+}
